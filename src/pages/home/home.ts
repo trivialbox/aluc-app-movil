@@ -11,8 +11,8 @@ import {Response} from "@angular/http";
   providers: [ReservaSrv]
 })
 export class HomePage {
-  public mac;
-  public token;
+  public mac = '00:10:49:00:01:02';
+  public token = 'aSDkERTYFRsffge';
   constructor(private navCtrl: NavController,
               private reservaSrv: ReservaSrv,
               private alerta: AlertController) {
@@ -24,9 +24,9 @@ export class HomePage {
           this.reservaSrv.validarReserva(
               this.mac,
               this.token,
-              scanner.toString()
-          ).map(
-              (response: Response) => {
+              scanner.text
+          ).subscribe(
+              (response) => {
                   this.alertaAluc(response.json().description);
               }
           )

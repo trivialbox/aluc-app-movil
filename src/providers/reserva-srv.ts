@@ -20,9 +20,11 @@ export class ReservaSrv {
 
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
     return this.http.post(
-        "http://172.28.149.56:8000/reservas/verificar/",
+        "http://192.168.1.2:8000/reservas/verificar/",
         this.getParametros(mac, token, secret_code),
-        {headers:headers});
+        {headers:headers}
+    );
+
   }
 
   private getParametros(mac, token, secret_code){
