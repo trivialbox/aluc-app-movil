@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ReservaSrv {
 
-  constructor(public http: Http) {
+  constructor(private http: Http) {
   }
 
   /*post(url, parametros(body), {headers:headers})*/
