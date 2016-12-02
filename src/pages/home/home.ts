@@ -48,7 +48,7 @@ export class HomePage {
       subTitle: description,
       buttons: ['OK']
     });
-    alerta_exito.present();
+    alerta_aluc.present();
   }
 
 }
