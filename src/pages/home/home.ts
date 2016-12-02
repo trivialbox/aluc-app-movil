@@ -43,7 +43,7 @@ export class HomePage {
   }
 
   private alertaAluc(description){
-    let alerta_exito = this.alerta.create({
+    let alerta_aluc = this.alerta.create({
       title: "Aluc",
       subTitle: description,
       buttons: ['OK']
