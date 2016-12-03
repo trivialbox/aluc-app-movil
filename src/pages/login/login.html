@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar text-center>
+    <ion-title text-center>
+      ALUC
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div>
+    <img src="assets/img/aluc.png">
+
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Número cédula</ion-label>
+      <ion-input type="text" [(ngModel)]="cedula"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="password" ></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div>
+    <ion-row>
+      <ion-col>
+        <ion-row>
+          <ion-col>
+            <ion-label  style="color: lightslategray">Recordarme</ion-label>
+          </ion-col>
+          <ion-col center>
+            <ion-checkbox responsive-sm checked="false"></ion-checkbox>
+
+          </ion-col>
+          <ion-col>
+            <p></p>
+          </ion-col>
+          <ion-col>
+            <p></p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+
+      <ion-col center>
+        <button ion-button block (click)="entrar()">Entrar</button>
+      </ion-col>
+    </ion-row>
+    <ion-img ></ion-img>
+  </div>
+
+  <ion-footer >
+    <ion-toolbar text-center>
+      <p style="color: #8c8c8c">&copy; 2016 Trivial Box</p>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
