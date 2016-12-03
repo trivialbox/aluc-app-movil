@@ -10,6 +10,7 @@ export class ReservaSrv {
   }
 
   /*post(url, parametros(body), {headers:headers})*/
+  /*headers.append('Content-Type', 'application/x-www-form-urlencoded');*/
 
   validarReserva(
       mac,
