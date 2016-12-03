@@ -4,6 +4,7 @@ import { BarcodeScanner } from 'ionic-native'
 import { NavController, AlertController } from 'ionic-angular';
 import { ReservaSrv } from '../../providers/reserva-srv';
 import {Response} from "@angular/http";
+import {_catch} from "rxjs/operator/catch";
 
 @Component({
   selector: 'page-home',
@@ -28,6 +29,9 @@ export class HomePage {
           ).subscribe(
               (response) => {
                   this.alertaAluc(response.json().description);
+              },
+              (err) => {
+                  this.alertaAluc(err.toString());
               }
           )
         },
