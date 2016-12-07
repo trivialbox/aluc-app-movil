@@ -3,22 +3,22 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Universidad De Cuenca</ion-title>
+    <ion-title>Aluc</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="card-background-page">
   <ion-card>
-    <img src="assets/img/estatal.png"/>
-    <ion-card-content>
+    <img  width="100" height="200" src="assets/img/qr1.png"/>
+    <ion-card-content text-center>
       <h2 class="card-title">
-        Gestión Moderadores
+        <b>Gestión Moderadores</b>
       </h2>
       <p>
-        Al leer el qr de reserva podrá acceder al mismo el usuario.
+        Presione el botón de parte inferior para escanear el qr de su reserva para procesarla.
       </p>
     </ion-card-content>
   </ion-card>
 
-  <button ion-button block (click)="getScanner()">Lectura Qr</button>
+  <button ion-button block (click)="getScanner()">Leer qr de Reserva</button>
 </ion-content>
