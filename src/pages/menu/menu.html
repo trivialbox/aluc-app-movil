@@ -1,17 +1,33 @@
 <ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title >{{cedula}}</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-header >
+        <ion-toolbar color="primary">
 
-  <ion-content>
-    <ion-list>
-      <button   menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        <p>{{p.title}}</p>
-      </button>
-    </ion-list>
-  </ion-content>
+            <ion-title ><br>
+                <ion-avatar item-left >
+                    <img src="assets/img/avatar.png" width="60" height="60">
+                </ion-avatar>
+
+            </ion-title>
+            <ion-badge padding item-left>{{num_cedula}}</ion-badge>
+
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <div>
+            <ion-list>
+
+                <div *ngFor="let p of pages" style="color: #4d4d4d">
+                    <button menuClose ion-item icon-left (click)="openPage(p)">
+                        <ion-icon text-center name="{{p.icon}}" ></ion-icon>
+                        <b style="font-size: small"> {{p.title}} </b>
+                    </button>
+                </div>
+
+            </ion-list>
+        </div>
+
+    </ion-content>
 
 </ion-menu>
 
